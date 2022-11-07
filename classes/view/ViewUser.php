@@ -12,12 +12,12 @@ class ViewUser
           <h5 class="card-title text-center">Saisissez vos identifiants</h5>
           <form class="row g-3">
             <div class="col-auto">
-              <label for="mail" class="form-label">Nom d'utilisateur : </label>
+              <label for="mail" class="form-label">Votre mail : </label>
               <input type="mail" class="form-control" name="mail" id="mail" aria-describedby="mailHelp" data-type="email" data-message="format non valide" placeholder="Votre adresse electronique">
               <small id="mailHelp" class="form-text text-muted"></small>
             </div>
             <div class="col-auto">
-              <label for="pwd" class="form-label">Mot de passe : </label>
+              <label for="pwd" class="form-label">Votre mot de passe : </label>
               <input type="password" class="form-control" name="pass" id="pass" aria-describedby="pwdHelp" data-type="pass" data-message="Mot de passe incorrect" placeholder="Votre mot de passe">
               <small id="mailHelp" class="form-text text-muted"></small>
             </div>
@@ -33,4 +33,3 @@ class ViewUser
 <?php
   }
 }
- 

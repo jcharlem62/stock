@@ -63,7 +63,7 @@ class Utils
             "tel" => "/^[\+]?[0-9]{10}$/",
             "photo" => "/^[\w\s\-\.]{1,22}(.jpg|.jpeg|.png|.gif)$/",
             "id" => "/[\d]+/",
-            "pass" => "/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/"
+            "pass" => "/^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!?.*&\/$~#]).{8,32}$/"
         ];
 
         //https://www.php.net/manual/fr/filter.filters.validate.php
@@ -73,6 +73,11 @@ class Utils
                     $valide = true;
                 }
                 break;
+            case "pass":
+                if (filter_var($str, FILTER_VALIDATE_EMAIL) !== false) {
+                    $valide = true;
+                }
+                break;    
             case "url":
                 if (filter_var($str, FILTER_VALIDATE_URL) !== false) {
                     $valide = true;

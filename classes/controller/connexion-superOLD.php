@@ -1,6 +1,4 @@
 <?php
-
-
 session_start();
 
 if (isset($_SESSION['id'])) {
@@ -28,8 +26,6 @@ if (isset($_SESSION['id'])) {
   require_once "../view/ViewTemplate.php";
   require_once "../model/ModelUser.php";
   require_once "../Utils.php";
-
-  
 
   // menu
 
